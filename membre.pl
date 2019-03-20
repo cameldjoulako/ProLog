@@ -1,4 +1,3 @@
-membre(X,[]):-false.
-membre(X,[T|Q]):-
-    X=T;
+membre(X,[X|_]):-!.
+membre(X,[_|Q]):-
     membre(X,Q).
