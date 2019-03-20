@@ -1,0 +1,7 @@
+/*Cas de base*/
+
+fusion(L,[],L).
+fusion([],L,L).
+
+fusion([T1|Q1],[T1|Q2],Q2):-
+    fusion(T1,Q1,Q2).

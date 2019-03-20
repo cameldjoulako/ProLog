@@ -1,0 +1,4 @@
+membre(X,[T|Q]):-
+    T=Q;
+membre(X,Q).
+    membre(X,[]):-false.

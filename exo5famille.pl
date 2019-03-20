@@ -1,0 +1,14 @@
+parent(jean,pierre).
+parent(marie,pierre).
+parent(alexandre,jean).
+parent(louise,jean).
+parent(paull,marie).
+parent(anne,marie).
+masc(jean).
+masc(pierre).
+masc(paul).
+masc(alexandre).
+fem(marie).
+fem(anne).
+fem(louise).
+grandparent(X,Y):-parent(Z,Y),parent(X,Z).
