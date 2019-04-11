@@ -1,0 +1,36 @@
+univ(dschang).
+univ(maroua).
+univ(buea).
+
+sport(foot).
+sport(hand).
+sport(basket).
+
+participe(dschang,foot).
+participe(dschang,hand).
+participe(dschang,basket).
+
+participe(maroua,foot).
+participe(maroua,hand).
+participe(maroua,basket).
+
+remporter(dschang, foot).
+remporter(dschang, basket).
+
+
+victoire(X,Y):-
+    univ(X),
+    sport(Y),
+    participe(X,Y),
+    remporter(X,Y).
+
+
+/*victoire(X):-
+    univ(X),
+    participe(X,foot),
+    participe(X,hand),
+    participe(X,basket),
+    remporter(X,foot);
+    remporter(X,basket);
+    remporter(X,hand).*/
+

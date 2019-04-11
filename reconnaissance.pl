@@ -1,0 +1,19 @@
+etudiant(kelly, fille, 18, prolog).
+etudiant(paved, garccon, 1, prolog).
+etudiant(hugues, garcon, 02.25, prolog).
+etudiant(camel, garcon, 15.5, prolog).
+etudiant(camel, garcon, 15.5, compilation).
+
+afficheSexe(Nom, Sexe):-
+    etudiant(Name, Sex, Note, Uv),
+    Note>=10,
+    Nom = Name,
+    Uv = prolog,
+    Sexe = Sex.
+etudiant(X,Y,Z,T):-
+    open("D:/MesProjets/ProLog/reconnaissance.pl", append, fichier),
+    write(fichier, "etudiant("),
+    write(fichier, Nom),
+    write(fichier, ")."),
+    write(fichier, "etudiant(X)."),
+    close(fichier).

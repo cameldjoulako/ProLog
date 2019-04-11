@@ -1,0 +1,33 @@
+main():-
+    write("Entrer un nom pour vérifier s'il est etudiant"),
+    read(Nom),
+    open("D:/MesProjets/ProLog/etudiant.txt", read, Fichier),
+    read_file(Fichier, Nom),
+    close(Fichier).
+
+ read_file(Fichier, Nom):-
+    read(Fichier, Var),
+    Nom == Var,
+    write(Nom),write(" est un etudiant"),
+    read_file(Fichier, Nom).
+
+ read_file(Fichier, Nom):-
+    at_end_of_stream(Fichier),
+    write("Voulez vous enregistrer? ",write("y->yes et n->no"),
+    Read(Response),
+    response(Response, Nom).
+
+
+response(Response, Nom):-
+    Response == 'y', ajoutetudiant(Nom),nl,main,
+    Response == 'n', write("Merci et aurevoir");
+    write("entrer y pour yes et n pour no"),
+    read(X), response(X, Nom).
+
+ajoutetudiant(Nom):-
+     open("D:/MesProjets/ProLog/etudiant.txt", append, Fichier),
+     writeln(Fchier, " "),
+     writeln(Fchier, "'"),
+     write(Fchier, Nom),
+      writeln(Fchier, "'."),
+      close(Fichier).

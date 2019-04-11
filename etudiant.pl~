@@ -1,0 +1,21 @@
+/*ECRITURE DANS UN FICHIER et vérification dans la base de données*/
+verifetudiant:-
+    write("Nom de l'etudiant: "),
+    read(Nom_etud),
+    consult("D:/MesProjets/ProLog/etudiant.pl"),
+    etudiant(Nom_etud).
+
+
+ajoutetudiant:-
+    writeln('Entrer le nom a jouté: '),nl,
+    read(Nom),
+    open("D:/MesProjets/ProLog/etudiant.pl", append, Fichier),
+    write(Fichier, "etudiant("),
+    write(Fichier, Nom),
+    write(Fichier, ")."),
+    close(Fichier).
+
+
+//les faits
+etudiant(camel).
+etudiant(leonce).

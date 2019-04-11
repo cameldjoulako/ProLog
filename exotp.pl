@@ -11,6 +11,3 @@ conversion:-
     read(C),
     downcase_atom(C, Result),
     write(Result).
-
-/*ECRITURE DANS UN FICHIER*/
-ecriturefichier(Nometudiant liste):-
