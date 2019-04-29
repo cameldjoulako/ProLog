@@ -20,3 +20,7 @@ pere(jean,jules).
 pere(elie,hugues).
 pere(elie,kelly).
 pere(nyangono,paved).
+
+
+creerliste:-
+

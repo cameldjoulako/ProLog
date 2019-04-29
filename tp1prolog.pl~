@@ -17,6 +17,6 @@ fille(X,Y):-soeur(X,Z),fils(Z,Y).
 /*enfant(X,Y):-soeur(X,Y),fils(Z,Y),epouse(Y,T),fils(X,T).*/
 
 pere(jean,jules).
-pere(elie,hugues)
+pere(elie,hugues).
 pere(elie,kelly).
 pere(nyangono,paved).
